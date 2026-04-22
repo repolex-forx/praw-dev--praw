@@ -1,0 +1,25 @@
+[2026-04-22T04:40:16Z] === ENRICH ITERATION 1 START | repo=praw-dev/praw sha=ac922d9d ===
+[2026-04-22T04:40:16Z] [iter=1] PHASE START: enrich repo=praw-dev/praw sha=ac922d9d runlog=/home/runner/work/forx/forx/storage/aggregate/lsp/logs/ac922d9d-enrich-iter-001.log output=/home/runner/work/forx/forx/storage/aggregate/lsp/ac922d9d68b80fbc0660b269c733d63ca5325ea2.nq.gz
+[2026-04-22T04:40:16Z] [iter=1] Step 1: Loading AST into disk-backed store mem_mb=77 MB
+[2026-04-22T04:40:19Z] [iter=1] AST store loaded triples=356549 load_secs=3 mem_mb=564 MB
+[2026-04-22T04:40:19Z] [iter=1] Step 2: Finding LSP targets mem_mb=564 MB
+[2026-04-22T04:40:20Z] [iter=1] LSP targets found call_sites=3011 imports=127 extends=131 implements=0 secs=1
+[2026-04-22T04:40:20Z] [iter=1] Step 2.7: Building position index (one-shot, shared across resolvers) mem_mb=564 MB
+[2026-04-22T04:40:22Z] [iter=1] Position index built positions=24943 nodes_with_types=32079 secs=2 mem_mb=564 MB
+[2026-04-22T04:40:22Z] [iter=1] Step 3: Starting LSP resolution mem_mb=564 MB already_completed_types=[] already_completed_files=0
+[2026-04-22T04:40:22Z] [iter=1] Resolving target type target_type=call_site count=3011
+[2026-04-22T04:40:47Z] [iter=1] HEARTBEAT target_type=call_site elapsed_min=0.5 files_done=2 resolved=41 errors=172 current=old/test_subreddit.py
+[2026-04-22T04:41:17Z] [iter=1] HEARTBEAT target_type=call_site elapsed_min=1.0 files_done=3 resolved=81 errors=394 current=praw/models/reddit/message.py
+[2026-04-22T04:42:01Z] [iter=1] HEARTBEAT target_type=call_site elapsed_min=1.8 files_done=7 resolved=132 errors=714 current=tests/unit/test_reddit.py
+[2026-04-22T04:42:40Z] [iter=1] HEARTBEAT target_type=call_site elapsed_min=2.4 files_done=15 resolved=225 errors=996 current=old/test_unauthenticated_reddit.py
+[2026-04-22T04:43:10Z] [iter=1] HEARTBEAT target_type=call_site elapsed_min=2.9 files_done=19 resolved=306 errors=1219 current=praw/reddit.py
+[2026-04-22T04:43:50Z] [iter=1] HEARTBEAT target_type=call_site elapsed_min=3.6 files_done=29 resolved=453 errors=1503 current=praw/models/reddit/base.py
+[2026-04-22T04:44:23Z] [iter=1] HEARTBEAT target_type=call_site elapsed_min=4.1 files_done=42 resolved=557 errors=1736 current=tests/integration/models/test_front.py
+[2026-04-22T04:44:45Z] [iter=1] Target type resolved target_type=call_site resolved=658 errors=1880 secs=262 mem_mb=564 MB
+[2026-04-22T04:44:45Z] [iter=1] Resolving target type target_type=import_statement count=127
+[2026-04-22T04:44:46Z] [iter=1] Target type resolved target_type=import_statement resolved=78 errors=0 secs=2 mem_mb=564 MB
+[2026-04-22T04:44:46Z] [iter=1] Resolving target type target_type=extends_clause count=131
+[2026-04-22T04:44:48Z] [iter=1] Target type resolved target_type=extends_clause resolved=95 errors=0 secs=2 mem_mb=564 MB
+[2026-04-22T04:44:51Z] [iter=1] Step 5: Writing final enrichment file triples=24807
+[2026-04-22T04:44:52Z] [iter=1] Enrichment file written path=/home/runner/work/forx/forx/storage/aggregate/lsp/ac922d9d68b80fbc0660b269c733d63ca5325ea2.nq.gz size_kb=480
+[2026-04-22T04:44:52Z] [iter=1] PHASE END: enrich elapsed_s=276 elapsed_min=4.6 total_triples=24807
